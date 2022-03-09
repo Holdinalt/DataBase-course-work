@@ -1,0 +1,33 @@
+<div class="block">
+  <div style="display: flex; flex-direction: column;">
+    <div class="line">План</div><br>
+    <div class="line" >
+      <div [ngClass]="getMark(completed_plan, required_plan)"> Сделано: {{completed_plan}}</div>
+      <div>/</div>
+      <div> Необходимо: {{required_plan}}</div>
+    </div>
+  </div>
+</div>
+<div class="block">
+  <div style="display: flex; flex-direction: column;">
+    <div class="line">
+      Доложить о работе
+    </div>
+    <div class="line">
+      <div>ID жертвы</div>
+      <input name="partID" [(ngModel)]="participant_id">
+    </div>
+    <div class="line">
+      <div>Комментарий</div>
+    </div>
+    <div>
+      <textarea [value]="comment"></textarea>
+    </div>
+    <div>
+      <button (click)="addReport()">Отправить</button>
+    </div>
+    <div *ngIf="victimDeadError" style="color: red">
+      Цель уже мертва, проверьте ID
+    </div>
+  </div>
+</div>

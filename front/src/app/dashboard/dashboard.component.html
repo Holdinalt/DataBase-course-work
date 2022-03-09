@@ -1,0 +1,41 @@
+<div class="wrapper">
+  <div>
+    <div class="block">
+      <div style="display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="line">
+          Приветствую <br>
+          {{makePost()}}, {{user.Login}} ({{user.ID}})
+          <br>
+        </div>
+        <div>
+          <br>
+        </div>
+        <div class="line">
+          <div>Имя: </div>
+          <div>{{user.Name}}</div>
+        </div>
+        <div class="line">
+          <div>Фамилия: </div>
+          <div>{{user.Surname}}</div>
+        </div>
+        <div class="line">
+          <div>Страна: </div>
+          <div>{{user.Country}}</div>
+        </div>
+        <br>
+        <div class="line">
+          <button (click)="clearUser()">Выйти</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="user.Mode == 1">
+    <dashboard-default-blade [required_plan]="plan[0]" [completed_plan]="plan[1]" [worker_id]="user.ID" (updatePlan)="updatePlan($event)"></dashboard-default-blade>
+  </div>
+
+  <div *ngIf="user.Mode == 2">
+    <dashboard-high-blade [reapers_plan]="reapers_plan" [country]="user.Country"></dashboard-high-blade>
+  </div>
+</div>
+

@@ -1,0 +1,54 @@
+.wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+
+
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.block{
+  padding: 10px 30px 30px 30px;
+  border: solid #002745;
+  border-radius: 25px;
+  background: #4a92c9;
+  zoom: 150%;
+}
+
+.name{
+  width: 100px;
+}
+
+.line{
+  display: flex;
+  flex-direction: row;
+  zoom: 125%
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+}
+
+.Error{
+  color: #ff0000;
+}
+
+input.Error{
+  color: #ff3f3f;
+}

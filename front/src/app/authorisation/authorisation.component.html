@@ -1,0 +1,49 @@
+
+<body>
+
+<div class="wrapper">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<div class="wrapper">
+  <div></div>
+  <div class="block">
+    <h2>Необходима авторизация</h2>
+    <form>
+      <div class="line">
+        <div class="name">Login:</div>
+        <input name="loginInput" [(ngModel)]="login"/>
+      </div>
+      <div class="line">
+        <div class="name">Password:</div>
+        <input  name="passwordInput" [(ngModel)]="password">
+      </div>
+      <br>
+      <div class="line">
+        <div class="name">
+          <button (click)="logIn()" style="zoom: 125%" >Войти</button>
+        </div>
+
+        <strong id="ErrorField" class="Error">{{Error}}</strong>
+      </div>
+      <div class="line" style="visibility: hidden">
+        <div class="name">
+          <button style="zoom: 125%" >Регистрация</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div>
+    <div [hidden]="!reg_mode" class="block">
+      <div class="line">
+        <div class="name">ID пасспорта</div>
+        <input name="passportId" [(ngModel)]="passportId">
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+

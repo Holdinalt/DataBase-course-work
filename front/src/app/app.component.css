@@ -1,0 +1,7 @@
+.body{
+  background: aqua url("/src/assets/background.jpg");
+}
+
+.screen{
+  width: 1920px;
+}

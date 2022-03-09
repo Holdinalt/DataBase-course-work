@@ -1,0 +1,23 @@
+.block{
+  padding: 10px 5px 5px 5px;
+  border: solid #002745;
+  background: #4a92c9;
+  zoom: 150%;
+  margin: 20px 20px 20px 20px;
+
+  overflow-x: auto;
+}
+
+.line{
+  display: flex;
+  flex-direction: row;
+  zoom: 125%;
+  justify-content: space-between;
+}
+
+.wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(100px, auto);
+  max-width: 100%;
+}
